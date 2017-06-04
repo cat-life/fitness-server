@@ -4,6 +4,19 @@ get    "/" => "main#index"
 // error
 get    "/error" => "error#base"
 
+get    "/end/user/list" => "user#list"
+get    "/end/user/:userId(\d+)" => "user#get"
+post   "/end/user" => "user#create"
+put    "/end/user/:userId(\d+)" => "user#update"
+delete "/end/user/:userId(\d+)" => "user#delete"
+
+get    "/end/user/:userId(\d+)/weight/list" => "weight#list"
+get    "/end/user/:userId(\d+)/weight/:time(\w+)" => "weight#get"
+post   "/end/user/:userId(\d+)/weight" => "weight#create"
+put    "/end/user/:userId(\d+)/weight/:time(\w+)" => "weight#update"
+post    "/end/user/:userId(\d+)/weight/:time(\w+)" => "weight#copy"
+delete "/end/user/:userId(\d+)/weight/:time(\w+)" => "weight#delete"
+
 // action
 get    "/end/project/list" => "project#list"
 get    "/end/project/:projectId(\d+)" => "project#get"

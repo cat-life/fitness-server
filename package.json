@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
     "lint": "git status --porcelain | sed s/^...// | grep \"js$\" | xargs node node_modules/eslint/bin/eslint",
     "serve": "nodemon app.js"
   },

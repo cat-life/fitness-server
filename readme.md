@@ -10,4 +10,8 @@ TODO:
 5、version
 
 For Developer:
-
+mysql.server start
+create datebase fitness
+npm run serve
+mysql -u root -p fitness
+123456

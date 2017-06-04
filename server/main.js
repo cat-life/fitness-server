@@ -5,6 +5,6 @@ export default Salt()
   .load('init')
   .load('static')
   .load('cors')
-  .load('forward-backend')
+  // .load('forward-backend')
   .load('router')
   .load('sql');
