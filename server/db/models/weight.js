@@ -10,16 +10,25 @@ const Weight = sequelize().define('weight', {
     primaryKey: true
   },
   time: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    validate: {
+      notEmpty: true
+    }
   },
   number: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    validate: {
+      notEmpty: true
+    }
   },
   BMI: {
     type: Sequelize.INTEGER
   },
   user_id: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    validate: {
+      notEmpty: true
+    }
   },
   uid: {
     type: Sequelize.UUID

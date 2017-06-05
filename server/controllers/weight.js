@@ -24,7 +24,7 @@ export default class Main extends Controller {
       this.podata({data: version});
     }
 
-    *create(userId) {
+    *create(userId, time) {
       let query = queryString.parse(this.ctx.request.url.split('?')[1]);
       query.uid = uuid.v1();
       query.user_id = userId - 0;

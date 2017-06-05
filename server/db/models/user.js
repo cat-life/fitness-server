@@ -19,20 +19,29 @@ const User = sequelize().define('user', {
     }
   },
   unit: {
+    // 0: 斤，1：公斤，2：磅
     type: Sequelize.STRING,
     validate: {
-      notEmpty: true,
-      isUrl: true
+      notEmpty: true
     }
   },
   target: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    validate: {
+      notEmpty: true
+    }
   },
   age: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    validate: {
+      notEmpty: true
+    }
   },
   height: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    validate: {
+      notEmpty: true
+    }
   },
   uid: {
     type: Sequelize.UUID
